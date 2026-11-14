@@ -27,7 +27,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify(generateSchemaOrg()),
+      innerHTML: JSON.stringify(generateSchemaOrg()),
     },
   ],
 })
