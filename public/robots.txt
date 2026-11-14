@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://phoenixtech.web.id/sitemap.xml
+

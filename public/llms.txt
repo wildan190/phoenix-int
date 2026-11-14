@@ -1,0 +1,34 @@
+# Phoenix Technologies
+
+> Sistem digital yang bangkit dan tumbuh bersama bisnis Anda. Solusi Custom Software, IoT, POS, Reservasi, Ticketing, Sistem Keuangan, dan Otomasi Bisnis di Rangkasbitung, Banten & seluruh Indonesia.
+
+Phoenix Technologies adalah software house dan konsultan teknologi yang berlokasi di Rangkasbitung, Lebak, Banten. Kami merancang, membangun, dan merawat infrastruktur digital untuk UMKM, korporasi, pariwisata, hingga institusi.
+
+- Website: https://phoenixtech.web.id
+- Email: connectphoenixtech@gmail.com
+- WhatsApp: +62 817-5200-116 (https://wa.me/628175200116)
+- Lokasi: Jl. Profesor Dr. Insinyur Soetami, Kp. Malangnengah, Cijoro Pasir, Rangkasbitung, Lebak, Banten 42316
+
+## Layanan Utama
+
+- [Tech Solutions](https://phoenixtech.web.id/#layanan): Konsultasi dan arsitektur teknologi: memilih platform, merancang infrastruktur, dan menyusun peta jalan digital.
+- [Custom Software](https://phoenixtech.web.id/#layanan): Aplikasi web dan mobile yang dibuat khusus mengikuti proses bisnis klien.
+- [IoT Solutions](https://phoenixtech.web.id/#layanan): Perangkat dan sensor yang terhubung ke dashboard real-time untuk monitoring dan peringatan dini.
+- [Business Solutions](https://phoenixtech.web.id/#layanan): Sistem operasional terpadu untuk inventori, pelanggan (CRM), SDM, dan laporan terpusat.
+- [Finance System Solutions](https://phoenixtech.web.id/#layanan): Pencatatan transaksi, invoice, pembayaran, dan laporan keuangan yang siap audit.
+- [Ticketing Solutions](https://phoenixtech.web.id/#layanan): Penjualan tiket online dengan barcode/QR code dan sistem validasi pintu masuk untuk event, wisata, dan transportasi.
+- [Reservation System Solutions](https://phoenixtech.web.id/#layanan): Booking online untuk hotel, restoran, klinik, atau jasa lengkap dengan pengingat otomatis.
+- [POS Solutions](https://phoenixtech.web.id/#layanan): Aplikasi kasir cepat dengan stok real-time, sinkronisasi cloud, dan dukungan multi-outlet.
+- [Automation Solutions](https://phoenixtech.web.id/#layanan): Otomasi alur kerja manual berulang yang menghubungkan berbagai aplikasi dan data bisnis.
+
+## Metodologi Kerja
+
+1. **Fase 1: Analisis Kebutuhan**: Diskusi pemangku kepentingan, pemetaan alur kerja, dan penentuan lingkup (Deliverable: Dokumen lingkup kerja & estimasi).
+2. **Fase 2: Perancangan Solusi**: Arsitektur sistem, desain database, dan UI/UX prototype (Deliverable: Prototipe interaktif & dokumen desain).
+3. **Fase 3: Pengembangan & Pengujian**: Sprint development berkala, demo berkala, uji fungsi & keamanan (Deliverable: Versi uji & test report).
+4. **Fase 4: Implementasi & Dukungan**: Deployment ke production, migrasi data, pelatihan pengguna, dan maintenance berkelanjutan (Deliverable: Sistem live & dokumentasi).
+
+## Tautan Informasi Lengkap
+
+- [Konteks Lengkap untuk LLM](https://phoenixtech.web.id/llms-full.txt): Dokumentasi lengkap teks utuh seluruh modul, FAQ, dan panduan integrasi.
+- [Sitemap XML](https://phoenixtech.web.id/sitemap.xml): Peta situs resmi terindeks search engine.
