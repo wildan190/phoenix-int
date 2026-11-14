@@ -1,0 +1,11 @@
+node_modules
+.output
+.nuxt
+.git
+.github
+dist
+npm-debug.log*
+.DS_Store
+*.md
+template_index.html
+
