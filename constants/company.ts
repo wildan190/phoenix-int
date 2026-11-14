@@ -1,5 +1,6 @@
 import type { CompanyLocation, ContactChannel } from '../types/company'
 
+export const SITE_URL = 'https://phoenixtech.web.id'
 export const COMPANY_NAME = 'Phoenix Technologies'
 export const COMPANY_PHONE_RAW = '08175200116'
 export const COMPANY_PHONE_DISPLAY = '0817-5200-116'
