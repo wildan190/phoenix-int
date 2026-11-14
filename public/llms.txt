@@ -32,3 +32,4 @@ Phoenix Technologies adalah software house dan konsultan teknologi yang berlokas
 
 - [Konteks Lengkap untuk LLM](https://phoenixtech.web.id/llms-full.txt): Dokumentasi lengkap teks utuh seluruh modul, FAQ, dan panduan integrasi.
 - [Sitemap XML](https://phoenixtech.web.id/sitemap.xml): Peta situs resmi terindeks search engine.
+

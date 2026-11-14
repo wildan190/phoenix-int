@@ -10,3 +10,4 @@ export default defineEventHandler((event) => {
     return '# Phoenix Technologies\n\nhttps://phoenixtech.web.id'
   }
 })
+
