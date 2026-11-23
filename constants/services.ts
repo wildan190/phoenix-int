@@ -78,5 +78,13 @@ export const SERVICES_DATA: ServiceItem[] = [
     tags: ['Workflow', 'Integrasi', 'Bot'],
     iconSvg: '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
   },
+  {
+    id: 'maintenance',
+    name: 'Maintenance',
+    description:
+      'Pemeliharaan berkala untuk menjaga aplikasi tetap stabil dan sesuai kebutuhan, termasuk perbaikan bug serta pembaruan sistem.',
+    tags: ['Perbaikan Bug', 'Pembaruan', 'Monitoring'],
+    iconSvg:
+      '<path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3z"/>',
+  },
 ]
-

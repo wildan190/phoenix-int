@@ -3,6 +3,8 @@
     <HeroSection />
     <ServicesSection />
     <WhySection />
+    <ClientsSection />
+    <PortfolioSection />
     <ProcessSection />
     <CtaBanner />
     <ContactSection />

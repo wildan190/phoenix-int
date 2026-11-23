@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
     <div class="wrap">
       <div class="head">
         <span class="tag">// layanan</span>
-        <h2>Sembilan solusi yang mengorbit satu tujuan: bisnis Anda berjalan lebih ringan.</h2>
+        <h2>Sepuluh solusi yang mengorbit satu tujuan: bisnis Anda berjalan lebih ringan.</h2>
         <p>Pilih satu untuk melihat detailnya. Semua sistem bisa berdiri sendiri atau saling terhubung.</p>
       </div>
 
@@ -180,4 +180,3 @@ onBeforeUnmount(() => {
     </div>
   </section>
 </template>
-
