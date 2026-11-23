@@ -1,3 +1,5 @@
+import { SITE_META } from './constants/seo'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
@@ -16,19 +18,17 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'id',
       },
-      title: 'Phoenix Technologies | Solusi Custom Software, IoT & Sistem Digital Terpadu',
+      title: SITE_META.title,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         {
           name: 'description',
-          content:
-            'Phoenix Technologies menghadirkan solusi teknologi terpercaya: Custom Software, IoT, POS, Reservasi, Ticketing, Sistem Keuangan, dan Otomasi Bisnis di Rangkasbitung, Banten & seluruh Indonesia.',
+          content: SITE_META.description,
         },
         {
           name: 'keywords',
-          content:
-            'Phoenix Technologies, Custom Software Indonesia, Solusi IoT, POS Kasir Multi-outlet, Sistem Reservasi Online, Aplikasi Ticketing QR, Sistem Informasi Keuangan, Otomasi Bisnis, Software House Banten, Software House Rangkasbitung, Konsultan IT Lebak',
+          content: SITE_META.keywords,
         },
         { name: 'author', content: 'Phoenix Technologies' },
         {
@@ -43,41 +43,39 @@ export default defineNuxtConfig({
         // Open Graph / Facebook Meta Tags
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Phoenix Technologies' },
-        { property: 'og:url', content: 'https://phoenixtech.web.id/' },
+        { property: 'og:url', content: SITE_META.siteUrl },
         {
           property: 'og:title',
-          content: 'Phoenix Technologies | Solusi Custom Software, IoT & Sistem Digital Terpadu',
+          content: SITE_META.title,
         },
         {
           property: 'og:description',
-          content:
-            'Sistem digital yang bangkit dan tumbuh bersama bisnis Anda. Layanan Custom Software, IoT, POS, Reservasi, Ticketing, Keuangan, dan Otomasi.',
+          content: SITE_META.description,
         },
-        { property: 'og:image', content: 'https://phoenixtech.web.id/og-image.png' },
+        { property: 'og:image', content: SITE_META.ogImage },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Phoenix Technologies Logo & Banner' },
-        { property: 'og:locale', content: 'id_ID' },
+        { property: 'og:image:alt', content: `${SITE_META.siteName} | Solusi POS dan Software` },
+        { property: 'og:locale', content: SITE_META.locale },
         // Twitter Card Meta Tags
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:url', content: 'https://phoenixtech.web.id/' },
+        { name: 'twitter:url', content: SITE_META.siteUrl },
         {
           name: 'twitter:title',
-          content: 'Phoenix Technologies | Solusi Custom Software, IoT & Sistem Digital Terpadu',
+          content: SITE_META.title,
         },
         {
           name: 'twitter:description',
-          content:
-            'Sistem digital yang bangkit dan tumbuh bersama bisnis Anda. Solusi Custom Software, IoT, POS, Reservasi, Tiket, Keuangan, dan Otomasi.',
+          content: SITE_META.description,
         },
-        { name: 'twitter:image', content: 'https://phoenixtech.web.id/og-image.png' },
+        { name: 'twitter:image', content: SITE_META.ogImage },
         // Mobile & Theme
         { name: 'theme-color', content: '#FFF8F1', media: '(prefers-color-scheme: light)' },
         { name: 'theme-color', content: '#130E0B', media: '(prefers-color-scheme: dark)' },
         { name: 'claude:viewport-fit-sides', content: 'cover' },
       ],
       link: [
-        { rel: 'canonical', href: 'https://phoenixtech.web.id/' },
+        { rel: 'canonical', href: `${SITE_META.siteUrl}/` },
         { rel: 'icon', type: 'image/png', href: '/logo.png' },
         { rel: 'apple-touch-icon', href: '/logo.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

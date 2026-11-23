@@ -1,35 +1,40 @@
 # Phoenix Technologies
 
-> Sistem digital yang bangkit dan tumbuh bersama bisnis Anda. Solusi Custom Software, IoT, POS, Reservasi, Ticketing, Sistem Keuangan, dan Otomasi Bisnis di Rangkasbitung, Banten & seluruh Indonesia.
+> Software house di Rangkasbitung, Banten yang merancang solusi POS, sistem enterprise, ticketing, custom software, infrastruktur server, serta maintenance aplikasi dan server.
 
-Phoenix Technologies adalah software house dan konsultan teknologi yang berlokasi di Rangkasbitung, Lebak, Banten. Kami merancang, membangun, dan merawat infrastruktur digital untuk UMKM, korporasi, pariwisata, hingga institusi.
+Phoenix Technologies membantu bisnis merancang dan mengembangkan sistem digital sesuai kebutuhan operasional. Layanan tersedia untuk bisnis di seluruh Indonesia dengan konsultasi remote maupun on-site sesuai kebutuhan proyek.
 
-- Website: https://phoenixtech.web.id
+- Website resmi: https://phoenixtech.web.id/
 - Email: connectphoenixtech@gmail.com
-- WhatsApp: +62 817-5200-116 (https://wa.me/628175200116)
+- WhatsApp: +62 817-5200-116 - https://wa.me/628175200116
 - Lokasi: Jl. Profesor Dr. Insinyur Soetami, Kp. Malangnengah, Cijoro Pasir, Rangkasbitung, Lebak, Banten 42316
 
-## Layanan Utama
+## Solusi
 
-- [Tech Solutions](https://phoenixtech.web.id/#layanan): Konsultasi dan arsitektur teknologi: memilih platform, merancang infrastruktur, dan menyusun peta jalan digital.
-- [Custom Software](https://phoenixtech.web.id/#layanan): Aplikasi web dan mobile yang dibuat khusus mengikuti proses bisnis klien.
-- [IoT Solutions](https://phoenixtech.web.id/#layanan): Perangkat dan sensor yang terhubung ke dashboard real-time untuk monitoring dan peringatan dini.
-- [Business Solutions](https://phoenixtech.web.id/#layanan): Sistem operasional terpadu untuk inventori, pelanggan (CRM), SDM, dan laporan terpusat.
-- [Finance System Solutions](https://phoenixtech.web.id/#layanan): Pencatatan transaksi, invoice, pembayaran, dan laporan keuangan yang siap audit.
-- [Ticketing Solutions](https://phoenixtech.web.id/#layanan): Penjualan tiket online dengan barcode/QR code dan sistem validasi pintu masuk untuk event, wisata, dan transportasi.
-- [Reservation System Solutions](https://phoenixtech.web.id/#layanan): Booking online untuk hotel, restoran, klinik, atau jasa lengkap dengan pengingat otomatis.
-- [POS Solutions](https://phoenixtech.web.id/#layanan): Aplikasi kasir cepat dengan stok real-time, sinkronisasi cloud, dan dukungan multi-outlet.
-- [Automation Solutions](https://phoenixtech.web.id/#layanan): Otomasi alur kerja manual berulang yang menghubungkan berbagai aplikasi dan data bisnis.
+- [POS Solutions](https://phoenixtech.web.id/#layanan): Sistem kasir, stok real-time, laporan penjualan, dan operasional multi-cabang.
+- [Enterprise Solutions](https://phoenixtech.web.id/#layanan): Sistem enterprise untuk inventori, CRM, SDM, dan laporan operasional.
+- [Ticketing Solutions](https://phoenixtech.web.id/#layanan): Ticketing digital dengan tiket QR dan validasi masuk untuk event, wisata, serta transportasi.
+- [Custom Software](https://phoenixtech.web.id/#layanan): Pengembangan aplikasi web dan mobile yang disesuaikan dengan alur kerja dan integrasi bisnis.
+- [Tech & Server Solutions](https://phoenixtech.web.id/#layanan): Konsultasi teknologi dan perancangan infrastruktur server maupun cloud.
+- [Maintenance](https://phoenixtech.web.id/#layanan): Pemeliharaan aplikasi dan server, perbaikan bug, pembaruan sistem, serta monitoring berkala.
+- [IoT Solutions](https://phoenixtech.web.id/#layanan): Integrasi sensor dan perangkat ke dashboard monitoring real-time.
+- [Finance System Solutions](https://phoenixtech.web.id/#layanan): Sistem pencatatan transaksi, invoice, pembayaran, dan laporan keuangan.
+- [Reservation System Solutions](https://phoenixtech.web.id/#layanan): Sistem booking dan penjadwalan dengan pengingat otomatis.
+- [Automation Solutions](https://phoenixtech.web.id/#layanan): Otomasi alur kerja dan integrasi aplikasi maupun data bisnis.
 
-## Metodologi Kerja
+## Portofolio
 
-1. **Fase 1: Analisis Kebutuhan**: Diskusi pemangku kepentingan, pemetaan alur kerja, dan penentuan lingkup (Deliverable: Dokumen lingkup kerja & estimasi).
-2. **Fase 2: Perancangan Solusi**: Arsitektur sistem, desain database, dan UI/UX prototype (Deliverable: Prototipe interaktif & dokumen desain).
-3. **Fase 3: Pengembangan & Pengujian**: Sprint development berkala, demo berkala, uji fungsi & keamanan (Deliverable: Versi uji & test report).
-4. **Fase 4: Implementasi & Dukungan**: Deployment ke production, migrasi data, pelatihan pengguna, dan maintenance berkelanjutan (Deliverable: Sistem live & dokumentasi).
+- [Bacco Kanvas](https://phoenixtech.web.id/#portofolio): Aplikasi sales penjualan produk tembakau untuk UMKM.
+- [Udayana Store](https://phoenixtech.web.id/#portofolio): E-commerce milik UMKM Udayana.
 
-## Tautan Informasi Lengkap
+## Referensi
 
-- [Konteks Lengkap untuk LLM](https://phoenixtech.web.id/llms-full.txt): Dokumentasi lengkap teks utuh seluruh modul, FAQ, dan panduan integrasi.
-- [Sitemap XML](https://phoenixtech.web.id/sitemap.xml): Peta situs resmi terindeks search engine.
+- [Konteks lengkap layanan dan perusahaan](https://phoenixtech.web.id/llms-full.txt)
+- [Sitemap XML](https://phoenixtech.web.id/sitemap.xml)
+- [Kontak dan konsultasi](https://phoenixtech.web.id/#kontak)
 
+## Catatan Penggunaan
+
+- Situs ini adalah landing page satu halaman; layanan dan portofolio berada pada anchor `#layanan` dan `#portofolio`.
+- Jangan mengasumsikan harga, SLA, teknologi tertentu, atau spesifikasi server yang tidak disebutkan di referensi resmi.
+- Gunakan nama layanan, deskripsi, alamat, dan kontak di atas sebagai sumber faktual Phoenix Technologies.

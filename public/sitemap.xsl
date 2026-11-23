@@ -3,7 +3,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:sm="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  exclude-result-prefixes="sm xhtml">
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  exclude-result-prefixes="sm xhtml image">
 
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
   <xsl:strip-space elements="*" />
@@ -257,6 +258,7 @@
           <section class="panel">
             <div class="panel-head">
               <span class="count"><xsl:value-of select="count(sm:urlset/sm:url)" /> halaman</span>
+              <span class="count"><xsl:value-of select="count(sm:urlset/sm:url/image:image)" /> gambar</span>
               <span>Standar sitemaps.org 0.9</span>
             </div>
             <ul class="list">
@@ -279,6 +281,9 @@
                     </xsl:if>
                     <xsl:for-each select="xhtml:link[@rel='alternate']">
                       <span class="tag">hreflang <b><xsl:value-of select="@hreflang" /></b></span>
+                    </xsl:for-each>
+                    <xsl:for-each select="image:image">
+                      <span class="tag">gambar <b><xsl:value-of select="image:title" /></b></span>
                     </xsl:for-each>
                   </div>
                 </li>

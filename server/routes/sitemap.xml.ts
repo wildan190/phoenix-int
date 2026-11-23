@@ -1,16 +1,9 @@
-export default defineEventHandler((event) => {
-  setResponseHeader(event, 'content-type', 'application/xml')
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://phoenixtech.web.id/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="id" href="https://phoenixtech.web.id/" />
-  </url>
-</urlset>`
-})
+import { readPublicDocument } from '../public-content'
 
+export default defineEventHandler((event) => {
+  setResponseHeader(event, 'content-type', 'application/xml; charset=utf-8')
+  return (
+    readPublicDocument('sitemap.xml') ??
+    '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'
+  )
+})

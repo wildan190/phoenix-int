@@ -1,112 +1,146 @@
-# Phoenix Technologies - Full Documentation for LLMs
+# Phoenix Technologies - Referensi Lengkap
 
-> Phoenix Technologies adalah software house dan penyedia solusi teknologi digital terintegrasi yang berpusat di Rangkasbitung, Kabupaten Lebak, Banten, Indonesia. Kami merancang, membangun, mengintegrasikan, dan memelihara sistem digital berkinerja tinggi untuk bisnis dari skala menengah hingga korporasi.
+> Phoenix Technologies adalah software house di Rangkasbitung, Kabupaten Lebak, Banten, yang berfokus pada solusi POS, sistem enterprise, ticketing digital, custom software, infrastruktur server, dan maintenance aplikasi maupun server.
 
 ---
 
-## 1. Profil & Identitas Perusahaan
+## 1. Identitas dan Kontak
 
 - Nama Resmi: Phoenix Technologies
-- Domain Utama: https://phoenixtech.web.id
+- Website: https://phoenixtech.web.id/
 - Email Resmi: connectphoenixtech@gmail.com
-- Kontak WhatsApp Resmi: +62 817-5200-116 (Direct: https://wa.me/628175200116)
+- WhatsApp: +62 817-5200-116 (https://wa.me/628175200116)
 - Alamat Kantor: Jl. Profesor Dr. Insinyur Soetami, RT/RW 001/001, Kp. Malangnengah, Kelurahan Cijoro Pasir, Kecamatan Rangkasbitung, Kabupaten Lebak, Banten 42316, Indonesia.
 - Koordinat Geografis: 6°21′ LS · 106°15′ BT (-6.350, 106.250)
-- Area Layanan: Seluruh Indonesia (Remote & On-site Implementation)
+- Area Layanan: Seluruh Indonesia; konsultasi remote dan implementasi on-site sesuai kebutuhan proyek.
+- Jam operasional yang tercantum: Senin-Sabtu, 08.00-18.00 WIB.
 
 ---
 
-## 2. Katalog 9 Solusi Layanan
+## 2. Katalog 10 Solusi
 
-### 1. Tech Solutions
-- **Deskripsi**: Konsultasi strategis dan arsitektur teknologi end-to-end. Kami membantu perusahaan memilih platform yang tepat, merancang infrastruktur cloud yang scalable, hemat biaya, dan menyusun peta jalan (roadmap) digitalisasi bisnis.
-- **Topik / Tag**: Konsultasi IT, Arsitektur Sistem, Cloud Computing, DevOps, Keamanan Sistem.
-- **Cocok Untuk**: Perusahaan yang ingin bertransformasi digital atau memperbarui sistem legacy.
+### 1. POS Solutions (Point of Sale)
+- **Deskripsi**: Solusi POS untuk transaksi kasir, pengelolaan stok real-time, laporan penjualan, dan operasional multi-cabang.
+- **Topik / Tag**: Sistem POS, aplikasi kasir, stok, laporan penjualan, multi-cabang.
+- **Cocok Untuk**: Bisnis yang membutuhkan pencatatan transaksi dan stok terintegrasi.
 
-### 2. Custom Software
-- **Deskripsi**: Pembangunan aplikasi web, desktop, dan mobile (Android & iOS) yang dirancang spesifik mengikuti alur bisnis unik klien, bukan memaksakan bisnis beradaptasi dengan template kaku.
-- **Topik / Tag**: Web App, Mobile App, REST / GraphQL API, Microservices.
-- **Cocok Untuk**: Bisnis dengan proses operasional unik yang tidak dapat diakomodasi oleh aplikasi pasaran.
+### 2. Enterprise Solutions
+- **Deskripsi**: Sistem enterprise untuk mengelola inventori, pelanggan, SDM, dan laporan operasional dalam satu dashboard.
+- **Topik / Tag**: Enterprise software, ERP, CRM, multi-divisi, dashboard.
+- **Cocok Untuk**: Organisasi yang memerlukan sistem operasional terpusat dan sesuai proses bisnisnya.
 
-### 3. IoT Solutions (Internet of Things)
-- **Deskripsi**: Integrasi mikrokontroler, sensor pintar, dan perangkat keras industri ke dashboard web terpusat. Menyediakan pemantauan metrik secara real-time, grafik histori data, dan notifikasi peringatan otomatis saat terjadi anomali.
-- **Topik / Tag**: Sensor Monitoring, Telemetri, IoT Dashboard, Real-time Alerting, Smart Device.
-- **Cocok Untuk**: Manufaktur, pertanian pintar (smart agriculture), pergudangan suhu dingin, dan utility tracking.
+### 3. Ticketing Solutions
+- **Deskripsi**: Sistem ticketing digital dengan tiket QR dan validasi masuk untuk acara, destinasi wisata, maupun transportasi.
+- **Topik / Tag**: Ticketing online, tiket QR, event, wisata, transportasi, validasi tiket.
+- **Cocok Untuk**: Penyelenggara acara dan operator layanan yang perlu menerbitkan serta memvalidasi tiket.
 
-### 4. Business Solutions
-- **Deskripsi**: Sistem operasional terpadu yang menggabungkan manajemen inventori, CRM (Customer Relationship Management), absensi & SDM, serta laporan eksekutif dalam satu pintu dashboard terpadu.
-- **Topik / Tag**: ERP Ringan, CRM, Manajemen Stok, Executive Dashboard.
-- **Cocok Untuk**: Distributor, rantai pasok, ritel grosir, dan perusahaan multi-divisi.
+### 4. Custom Software
+- **Deskripsi**: Pengembangan aplikasi web dan mobile sesuai alur kerja, integrasi, dan kebutuhan khusus bisnis.
+- **Topik / Tag**: Custom software, aplikasi web, aplikasi mobile, integrasi API.
+- **Cocok Untuk**: Bisnis yang proses atau kebutuhannya tidak terwakili oleh perangkat lunak umum.
 
-### 5. Finance System Solutions
-- **Deskripsi**: Aplikasi pencatatan arus kas, invoicing otomatis, manajemen piutang/utang, multi-rekening bank, dan laporan keuangan komprehensif (Laba Rugi, Neraca, Arus Kas) yang rapi serta siap diaudit.
-- **Topik / Tag**: Invoicing, Pembukuan Akuntansi, Pajak, Laporan Keuangan, Audit Trail.
-- **Cocok Untuk**: Bisnis yang ingin merapikan kepatuhan keuangan dan transparansi transaksi.
+### 5. Tech & Server Solutions
+- **Deskripsi**: Konsultasi teknologi dan perancangan infrastruktur server maupun cloud, termasuk pemilihan platform dan penyusunan peta jalan sistem.
+- **Topik / Tag**: Solusi server, infrastruktur cloud, arsitektur sistem, konsultasi teknologi.
+- **Cocok Untuk**: Bisnis yang perlu merancang atau mengevaluasi infrastruktur teknologi.
 
-### 6. Ticketing Solutions
-- **Deskripsi**: Sistem manajemen tiket online terpadu dengan integrasi pembayaran otomatis, penerbitan e-ticket kode QR unik, serta aplikasi scanner validator di gerbang masuk dengan verifikasi anti-fraud.
-- **Topik / Tag**: Tiket Event, Destinasi Wisata, Tiket Transportasi, Validasi QR Code Cepat.
-- **Cocok Untuk**: Promotor acara/konser, pengelola tempat wisata, operator transportasi.
+### 6. Maintenance
+- **Deskripsi**: Pemeliharaan aplikasi dan server melalui perbaikan bug, pembaruan sistem, serta monitoring berkala sesuai kebutuhan operasional.
+- **Topik / Tag**: Maintenance aplikasi, maintenance server, perbaikan bug, pembaruan sistem, monitoring.
+- **Cocok Untuk**: Pemilik sistem yang membutuhkan pemeliharaan teknis setelah implementasi.
 
-### 7. Reservation System Solutions
-- **Deskripsi**: Platform pemesanan dan penjadwalan online 24/7 untuk reservasi kamar hotel, meja restoran, antrean klinik kesehatan, atau booking jasa dengan notifikasi pengingat otomatis via WhatsApp/Email.
-- **Topik / Tag**: Jadwal Online, Booking Engine, Kalender Dinamis, Pengingat Otomatis.
-- **Cocok Untuk**: Hotel, resort, klinik dokter, salon/spa, dan penyedia jasa reservasi.
+### 7. IoT Solutions (Internet of Things)
+- **Deskripsi**: Integrasi sensor dan perangkat ke dashboard untuk pemantauan kondisi, histori data, dan peringatan real-time.
+- **Topik / Tag**: IoT, sensor, monitoring, telemetri, dashboard, peringatan.
+- **Cocok Untuk**: Operasional yang perlu memantau perangkat atau kondisi lapangan.
 
-### 8. POS Solutions (Point of Sale)
-- **Deskripsi**: Aplikasi kasir modern yang responsif dengan sinkronisasi inventori real-time antar-cabang, pencetakan struk termal, integrasi pembayaran digital QRIS, serta analitik omzet per kasir/cabang.
-- **Topik / Tag**: Kasir Pintar, Sinkronisasi Stok, Multi-Outlet, Rekonsiliasi Kasir.
-- **Cocok Untuk**: Toko ritel, kafe, restoran, dan waralaba (franchise).
+### 8. Finance System Solutions
+- **Deskripsi**: Sistem pencatatan transaksi, invoice, pembayaran, dan laporan keuangan.
+- **Topik / Tag**: Pencatatan keuangan, invoice, pembayaran, laporan.
+- **Cocok Untuk**: Bisnis yang ingin menyusun pencatatan dan pelaporan keuangan secara lebih teratur.
 
-### 9. Automation Solutions
-- **Deskripsi**: Menghubungkan berbagai software dan database yang terpisah untuk menghilangkan input data manual yang repetitif, memangkas human error, dan mempercepat alur kerja harian.
-- **Topik / Tag**: Workflow Automation, Integrasi API, Webhook, Bot WhatsApp/Telegram.
-- **Cocok Untuk**: Tim operasional yang kelelahan menyalin data antar-spreadsheet atau antar-sistem.
+### 9. Reservation System Solutions
+- **Deskripsi**: Sistem booking dan penjadwalan online untuk hotel, restoran, klinik, atau jasa, dengan pengingat otomatis.
+- **Topik / Tag**: Reservasi online, booking, jadwal, pengingat.
+- **Cocok Untuk**: Bisnis yang mengelola slot waktu, jadwal, atau pemesanan.
+
+### 10. Automation Solutions
+- **Deskripsi**: Integrasi aplikasi dan data untuk mengurangi pekerjaan manual berulang dalam alur operasional.
+- **Topik / Tag**: Otomasi workflow, integrasi aplikasi, API, webhook.
+- **Cocok Untuk**: Tim yang perlu menyederhanakan proses kerja lintas aplikasi.
+
+Ruang lingkup, teknologi, integrasi, infrastruktur, dan bentuk dukungan ditentukan bersama setelah kebutuhan proyek dibahas. Deskripsi ini tidak menetapkan harga atau SLA.
 
 ---
 
-## 3. Metodologi Kerja 4 Fase
+## 3. Portofolio
+
+### Bacco Kanvas
+- Aplikasi sales penjualan produk tembakau untuk UMKM.
+- Referensi: https://phoenixtech.web.id/#portofolio
+
+### Udayana Store
+- E-commerce milik UMKM Udayana.
+- Referensi: https://phoenixtech.web.id/#portofolio
+
+---
+
+## 4. Metodologi Kerja 4 Fase
 
 1. **Fase 1: Analisis Kebutuhan**:
-   - Wawancara mendalam pemangku kepentingan.
-   - Pemetaan alur operasional berjalan (as-is workflow).
-   - Penentuan prioritas MVP (Minimum Viable Product).
-   - Deliverable: Dokumen Lingkup Kerja (SOW) & Estimasi Waktu.
+   - Diskusi dan wawancara pemangku kepentingan.
+   - Pemetaan alur kerja saat ini.
+   - Penentuan lingkup dan prioritas.
+   - Deliverable: Dokumen lingkup kerja dan estimasi.
 
 2. **Fase 2: Perancangan Solusi**:
-   - Perancangan arsitektur database dan diagram relasi data.
-   - Desain antarmuka pengguna (UI/UX) yang ramah pengguna.
-   - Validasi dan persetujuan prototipe sebelum penulisan kode.
-   - Deliverable: Prototipe Interaktif & Blueprint Arsitektur.
+   - Rancangan arsitektur dan basis data.
+   - Desain alur dan antarmuka pengguna.
+   - Persetujuan prototipe.
+   - Deliverable: Prototipe dan dokumen rancangan.
 
 3. **Fase 3: Pengembangan dan Pengujian**:
-   - Pembangunan bertahap dengan prinsip Clean Architecture.
-   - Demo kemajuan aplikasi berkala kepada klien.
-   - Pengujian fungsional, performa, dan kerentanan keamanan.
-   - Deliverable: Aplikasi Versi Uji & Dokumen Test Report.
+   - Pengembangan sistem per modul.
+   - Demo berkala kepada klien.
+   - Pengujian fungsi dan keamanan.
+   - Deliverable: Versi uji dan laporan pengujian.
 
 4. **Fase 4: Implementasi dan Pendampingan**:
-   - Deployment ke cloud server produksi berkecepatan tinggi.
-   - Migrasi data awal dari sistem lama.
-   - Pelatihan menyeluruh untuk staf dan admin.
-   - Deliverable: Sistem Live, Dokumentasi Penggunaan, dan Garansi Pemeliharaan.
+   - Migrasi data dan peluncuran sistem ke lingkungan operasional.
+   - Pelatihan pengguna.
+   - Pemeliharaan dan dukungan teknis.
+   - Deliverable: Sistem operasional dan panduan pengguna.
 
 ---
 
-## 4. Keunggulan Phoenix Technologies
+## 5. Pendekatan Phoenix Technologies
 
 - **Sesuai Proses Bisnis**: Tidak memaksakan template; sistem dibangun menyesuaikan kebutuhan unik klien.
-- **Saling Terintegrasi**: Seluruh modul (POS, IoT, Keuangan, Reservasi) dapat saling bertukar data secara instan.
-- **Modular & Siap Berkembang**: Skalabel dari satu cabang hingga puluhan cabang tanpa perlu merombak dari nol.
-- **Dukungan Berkelanjutan**: Tim teknis selalu siap mendampingi pasca peluncuran.
+- **Saling Terintegrasi**: Sistem POS, enterprise, IoT, keuangan, dan reservasi dapat dirancang untuk bertukar data sesuai ruang lingkup.
+- **Modular**: Solusi dapat dikembangkan bertahap berdasarkan prioritas dan kebutuhan proyek.
+- **Pendampingan**: Implementasi mencakup migrasi data dan pelatihan pengguna sesuai kesepakatan proyek.
 
 ---
 
-## 5. Pertanyaan Umum (FAQ)
+## 6. Pertanyaan Umum (FAQ)
 
 **Q: Bagaimana cara memulai proyek dengan Phoenix Technologies?**
-A: Anda dapat berkonsultasi awal tanpa biaya melalui WhatsApp resmi di +62 817-5200-116 atau mengunjungi formulir terminal interaktif di https://phoenixtech.web.id/#kontak.
+A: Hubungi WhatsApp resmi di +62 817-5200-116 atau gunakan formulir kontak di https://phoenixtech.web.id/#kontak. Konsultasi awal tidak dipungut biaya.
 
 **Q: Di mana lokasi kantor Phoenix Technologies?**
 A: Kantor kami beralamat di Jl. Profesor Dr. Insinyur Soetami, Kp. Malangnengah, Cijoro Pasir, Rangkasbitung, Kabupaten Lebak, Banten 42316.
 
+**Q: Apakah Phoenix Technologies melayani di luar Banten?**
+A: Ya. Area layanan mencakup seluruh Indonesia; konsultasi remote dan implementasi on-site dapat dibahas sesuai kebutuhan proyek.
+
+**Q: Apakah harga, teknologi, atau SLA sudah ditetapkan?**
+A: Tidak dicantumkan secara umum. Rincian dibahas setelah kebutuhan, integrasi, dan ruang lingkup proyek diketahui.
+
+## 7. Referensi Resmi
+
+- Website: https://phoenixtech.web.id/
+- Ringkasan untuk LLM: https://phoenixtech.web.id/llms.txt
+- Sitemap XML: https://phoenixtech.web.id/sitemap.xml
+- Layanan: https://phoenixtech.web.id/#layanan
+- Portofolio: https://phoenixtech.web.id/#portofolio
+- Kontak: https://phoenixtech.web.id/#kontak

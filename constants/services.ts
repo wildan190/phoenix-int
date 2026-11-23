@@ -3,10 +3,10 @@ import type { ServiceItem } from '../types/services'
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'tech-solutions',
-    name: 'Tech Solutions',
+    name: 'Tech & Server Solutions',
     description:
-      'Konsultasi dan arsitektur teknologi: memilih platform, merancang infrastruktur, dan menyusun peta jalan digital.',
-    tags: ['Konsultasi', 'Arsitektur', 'Cloud'],
+      'Konsultasi teknologi dan perancangan infrastruktur server maupun cloud, termasuk pemilihan platform dan penyusunan peta jalan sistem.',
+    tags: ['Server', 'Cloud', 'Arsitektur'],
     iconSvg:
       '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/>',
   },
@@ -14,7 +14,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'custom-software',
     name: 'Custom Software',
     description:
-      'Aplikasi web dan mobile yang dibuat khusus mengikuti proses bisnis Anda, bukan sebaliknya.',
+      'Pengembangan aplikasi web dan mobile sesuai alur kerja, integrasi, dan kebutuhan khusus bisnis Anda.',
     tags: ['Web', 'Mobile', 'API'],
     iconSvg: '<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
   },
@@ -29,10 +29,10 @@ export const SERVICES_DATA: ServiceItem[] = [
   },
   {
     id: 'business-solutions',
-    name: 'Business Solutions',
+    name: 'Enterprise Solutions',
     description:
-      'Sistem operasional terpadu untuk inventori, pelanggan, SDM, dan laporan dalam satu dashboard.',
-    tags: ['ERP ringan', 'CRM', 'Dashboard'],
+      'Sistem enterprise untuk mengelola inventori, pelanggan, SDM, dan laporan operasional dalam satu dashboard.',
+    tags: ['ERP', 'CRM', 'Multi-divisi'],
     iconSvg: '<path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/>',
   },
   {
@@ -47,7 +47,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'ticketing-solutions',
     name: 'Ticketing Solutions',
     description:
-      'Penjualan tiket online dengan kode QR dan validasi di pintu masuk, untuk acara, wisata, dan transportasi.',
+      'Sistem ticketing digital dengan tiket QR dan validasi masuk untuk acara, destinasi wisata, maupun transportasi.',
     tags: ['Event', 'Wisata', 'QR'],
     iconSvg:
       '<path d="M3 9a2 2 0 0 0 0 6v3h18v-3a2 2 0 0 1 0-6V6H3z"/><path d="M14 6v12" stroke-dasharray="2 2.4"/>',
@@ -65,7 +65,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'pos-solutions',
     name: 'POS Solutions',
     description:
-      'Kasir yang cepat dengan stok real-time, laporan penjualan, dan dukungan banyak outlet.',
+      'Solusi POS untuk transaksi kasir, pengelolaan stok real-time, laporan penjualan, dan operasional multi-cabang.',
     tags: ['Kasir', 'Stok', 'Multi-outlet'],
     iconSvg:
       '<path d="M6 3h12v6H6zM4 9h16v12H4zM8 13h2M12 13h2M8 17h2M12 17h4"/>',
@@ -82,8 +82,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'maintenance',
     name: 'Maintenance',
     description:
-      'Pemeliharaan berkala untuk menjaga aplikasi tetap stabil dan sesuai kebutuhan, termasuk perbaikan bug serta pembaruan sistem.',
-    tags: ['Perbaikan Bug', 'Pembaruan', 'Monitoring'],
+      'Pemeliharaan aplikasi dan server melalui perbaikan bug, pembaruan sistem, serta monitoring berkala sesuai kebutuhan operasional.',
+    tags: ['Aplikasi', 'Server', 'Monitoring'],
     iconSvg:
       '<path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3z"/>',
   },

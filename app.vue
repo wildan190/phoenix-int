@@ -19,9 +19,15 @@ useHead({
     },
     {
       rel: 'alternate',
-      type: 'text/markdown',
+      type: 'text/plain',
       href: `${SITE_URL}/llms.txt`,
-      title: 'LLMs Context',
+      title: 'Ringkasan untuk LLM',
+    },
+    {
+      rel: 'alternate',
+      type: 'text/plain',
+      href: `${SITE_URL}/llms-full.txt`,
+      title: 'Referensi lengkap untuk LLM',
     },
   ],
   script: [
