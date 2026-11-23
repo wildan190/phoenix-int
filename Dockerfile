@@ -24,6 +24,8 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
+# Restrict Node.js heap to 320MB so total container memory stays safely below 400MB
+ENV NODE_OPTIONS="--max-old-space-size=320"
 
 # Add curl for Coolify healthcheck
 RUN apk add --no-cache curl

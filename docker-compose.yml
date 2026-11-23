@@ -1,0 +1,19 @@
+services:
+  phoenix-int:
+    image: ghcr.io/wildan190/phoenix-int:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=80
+      - NODE_OPTIONS=--max-old-space-size=320
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 400M
+        reservations:
+          cpus: '0.2'
+          memory: 128M
