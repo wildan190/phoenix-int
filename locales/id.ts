@@ -245,7 +245,7 @@ export const idContent: SiteContent = {
         name: 'Bacco Kanvas',
         category: 'Aplikasi sales',
         description: 'Aplikasi sales penjualan produk tembakau untuk UMKM.',
-        image: '/portfolio/bacco-kanvas-icon.png',
+        image: '/portfolio/bacco-kanvas-icon.webp',
         imageAlt: 'Ikon aplikasi Bacco Kanvas',
       },
       {
@@ -253,7 +253,7 @@ export const idContent: SiteContent = {
         name: 'Udayana Store',
         category: 'E-commerce',
         description: 'E-commerce milik UMKM Udayana.',
-        image: '/portfolio/udayana-logo.png',
+        image: '/portfolio/udayana-logo.webp',
         imageAlt: 'Logo Udayana',
       },
     ],

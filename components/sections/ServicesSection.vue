@@ -109,7 +109,7 @@ onBeforeUnmount(() => {
           </svg>
 
           <div class="core">
-            <img src="/logo.png" alt="Phoenix Core" width="120" height="120" />
+            <img src="/logo-256.webp" alt="Phoenix Core" width="120" height="109" />
           </div>
 
           <!-- Service Circular Nodes -->

@@ -67,7 +67,14 @@ const projectWhatsAppUrl = computed(() => createWhatsAppUrl(content.value.whatsa
       <div class="r c" />
       <div class="r" />
       <div class="r b" />
-      <img src="/logo.png" alt="Phoenix Emblem" width="300" height="300" />
+      <img
+        src="/logo-384.webp"
+        srcset="/logo-384.webp 384w, /logo.webp 550w"
+        sizes="(max-width: 860px) 48vw, 320px"
+        alt="Phoenix Emblem"
+        width="300"
+        height="272"
+      />
     </div>
   </section>
 </template>

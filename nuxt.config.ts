@@ -55,18 +55,32 @@ export default defineNuxtConfig({
         { name: 'claude:viewport-fit-sides', content: 'cover' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/logo.png' },
-        { rel: 'apple-touch-icon', href: '/logo.png' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap',
-        },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
   },
+
+  routeRules: Object.fromEntries(
+    [
+      '/favicon.png',
+      '/apple-touch-icon.png',
+      '/logo.png',
+      '/logo.webp',
+      '/logo-64.webp',
+      '/logo-256.webp',
+      '/logo-384.webp',
+      '/og-image.png',
+      '/portfolio/bacco-kanvas-icon.webp',
+      '/portfolio/udayana-logo.webp',
+      '/fonts/dm-sans-latin.woff2',
+      '/fonts/unbounded-latin.woff2',
+      '/fonts/jetbrains-mono-latin.woff2',
+    ].map((path) => [
+      path,
+      { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+    ]),
+  ),
 
   typescript: {
     strict: true,

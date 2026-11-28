@@ -13,7 +13,7 @@ const consultationUrl = computed(() => createWhatsAppUrl(content.value.whatsapp.
     <div class="wrap">
       <div class="pill">
         <a class="brand" href="#atas" aria-label="Phoenix Technologies">
-          <img src="/logo.png" alt="Phoenix Technologies Logo" width="30" height="30" />
+          <img src="/logo-64.webp" alt="Phoenix Technologies Logo" width="30" height="27" />
           <b>PHOENIX</b>
         </a>
 

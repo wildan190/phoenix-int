@@ -74,7 +74,7 @@ function retry() {
     <header class="err-top">
       <div class="wrap">
         <a class="brand" :href="locale === 'en' ? '/en' : '/'" aria-label="Phoenix Technologies">
-          <img src="/logo.png" alt="Phoenix Technologies Logo" width="30" height="30" />
+          <img src="/logo-64.webp" alt="Phoenix Technologies Logo" width="30" height="27" />
           <b>PHOENIX</b>
         </a>
         <span class="tag">ERR {{ statusCode }}</span>

@@ -245,7 +245,7 @@ export const enContent: SiteContent = {
         name: 'Bacco Kanvas',
         category: 'Sales app',
         description: 'A sales app for tobacco product distribution, built for small businesses.',
-        image: '/portfolio/bacco-kanvas-icon.png',
+        image: '/portfolio/bacco-kanvas-icon.webp',
         imageAlt: 'Bacco Kanvas application icon',
       },
       {
@@ -253,7 +253,7 @@ export const enContent: SiteContent = {
         name: 'Udayana Store',
         category: 'E-commerce',
         description: 'An e-commerce platform for the Udayana small business.',
-        image: '/portfolio/udayana-logo.png',
+        image: '/portfolio/udayana-logo.webp',
         imageAlt: 'Udayana logo',
       },
     ],
