@@ -57,6 +57,24 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        // Preload font kritis (dipakai teks di atas lipatan: wordmark & tagline)
+        // supaya fetch-nya mulai lebih awal tanpa menunggu penemuan lewat
+        // @font-face, sehingga critical request chain jadi lebih pendek.
+        // crossorigin wajib ada agar cocok dengan cache entry font request.
+        {
+          rel: 'preload',
+          as: 'font',
+          type: 'font/woff2',
+          href: '/fonts/dm-sans-latin.woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          as: 'font',
+          type: 'font/woff2',
+          href: '/fonts/unbounded-latin.woff2',
+          crossorigin: 'anonymous',
+        },
       ],
       // Google Tag Manager (container GTM-PWT997FW), dimuat async di <head>.
       // Tag lain (GA4, Meta Pixel, dsb) dikelola dari dalam dashboard GTM.
