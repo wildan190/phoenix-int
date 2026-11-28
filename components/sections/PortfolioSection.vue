@@ -209,7 +209,7 @@ const { content } = useContent()
 
 .bacco-brand span {
   margin-top: 0.3rem;
-  color: #857b76;
+  color: #6d625c;
   font-size: 0.68rem;
   line-height: 1.45;
 }
@@ -239,12 +239,12 @@ const { content } = useContent()
   padding: 0 0.7rem;
   border: 1px solid #e4e4e4;
   border-radius: 9px;
-  color: #777;
+  color: #6b6b6b;
   font-size: 0.72rem;
 }
 
 .field-icon {
-  color: #858585;
+  color: #6b6b6b;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -304,7 +304,7 @@ const { content } = useContent()
 
 .udayana-content > p {
   margin: 0.45rem 0 0.95rem;
-  color: #777;
+  color: #6b6b6b;
   font-size: 0.73rem;
   line-height: 1.45;
 }
@@ -320,7 +320,7 @@ const { content } = useContent()
   align-items: center;
   gap: 0.4rem;
   margin: 0.65rem 0;
-  color: #777;
+  color: #6b6b6b;
   font-size: 0.62rem;
 }
 
@@ -328,17 +328,17 @@ const { content } = useContent()
   width: 13px;
   height: 13px;
   border-radius: 4px;
-  background: #2780ef;
+  background: #1665d8;
 }
 
 .udayana-content .login-button {
-  background: #2780ef;
+  background: #1665d8;
   text-transform: none;
 }
 
 .register {
   margin-top: 0.7rem;
-  color: #2780ef;
+  color: #1665d8;
   text-align: center;
   font-size: 0.62rem;
   font-weight: 700;
