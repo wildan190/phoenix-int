@@ -60,7 +60,7 @@ export const enContent: SiteContent = {
   htmlLang: 'en',
   canonicalPath: '/en',
   seo: {
-    title: 'Phoenix Technologies | POS, Enterprise & Custom Software',
+    title: 'Phoenix Technologies | POS, Enterprise & Custom Software Solutions',
     description:
       'POS solutions, enterprise software, digital ticketing, application & server maintenance, and custom software from Rangkasbitung, Banten for businesses across Indonesia.',
     keywords:
