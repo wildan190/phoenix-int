@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { PROCESS_PHASES } from '~/constants/process'
+import { useContent } from '~/composables/useContent'
+
+const { content } = useContent()
 </script>
 
 <template>
   <section class="s" id="proses">
     <div class="wrap">
       <div class="head">
-        <span class="tag">// metodologi kerja</span>
-        <h2>Proses kerja yang terstruktur dan transparan di setiap fase.</h2>
+        <span class="tag">{{ content.process.tag }}</span>
+        <h2>{{ content.process.heading }}</h2>
       </div>
 
       <div class="method">
         <div
-          v-for="phase in PROCESS_PHASES"
+          v-for="phase in content.process.phases"
           :key="phase.phaseNumber"
           class="ph"
         >
@@ -25,7 +27,7 @@ import { PROCESS_PHASES } from '~/constants/process'
           <p>{{ phase.description }}</p>
 
           <div>
-            <h4>Aktivitas</h4>
+            <h4>{{ content.process.activitiesLabel }}</h4>
             <ul>
               <li v-for="(act, idx) in phase.activities" :key="idx">
                 {{ act }}
@@ -34,7 +36,7 @@ import { PROCESS_PHASES } from '~/constants/process'
           </div>
 
           <div class="dl">
-            <h4>Deliverable</h4>
+            <h4>{{ content.process.deliverableLabel }}</h4>
             {{ phase.deliverable }}
           </div>
         </div>

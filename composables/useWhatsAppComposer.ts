@@ -1,28 +1,27 @@
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { createWhatsAppUrl } from '../constants/company'
-import { SERVICES_DATA } from '../constants/services'
+import { useContent } from './useContent'
 
 export function useWhatsAppComposer() {
+  const { content } = useContent()
+
   const clientName = ref('')
-  const selectedServiceName = ref(SERVICES_DATA[0]?.name || 'Tech Solutions')
+  const selectedServiceName = ref(content.value.services.items[0]?.name ?? '')
   const messageNotes = ref('')
 
-  const generatedMessage = computed(() => {
-    const greeting = 'Halo Phoenix Technologies, '
-    const namePart = clientName.value.trim() ? `saya ${clientName.value.trim()}. ` : ''
-    const servicePart = `Saya tertarik dengan layanan ${selectedServiceName.value}.`
-    const notesPart = messageNotes.value.trim() ? ` ${messageNotes.value.trim()}` : ''
+  const generatedMessage = computed(() =>
+    content.value.whatsapp.composeMessage({
+      name: clientName.value,
+      service: selectedServiceName.value,
+      notes: messageNotes.value,
+    })
+  )
 
-    return `${greeting}${namePart}${servicePart}${notesPart}`
-  })
-
-  const whatsAppUrl = computed(() => {
-    return createWhatsAppUrl(generatedMessage.value)
-  })
+  const whatsAppUrl = computed(() => createWhatsAppUrl(generatedMessage.value))
 
   function resetForm() {
     clientName.value = ''
-    selectedServiceName.value = SERVICES_DATA[0]?.name || 'Tech Solutions'
+    selectedServiceName.value = content.value.services.items[0]?.name ?? ''
     messageNotes.value = ''
   }
 
@@ -35,4 +34,3 @@ export function useWhatsAppComposer() {
     resetForm,
   }
 }
-

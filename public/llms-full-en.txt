@@ -1,0 +1,146 @@
+# Phoenix Technologies - Full Reference
+
+> Phoenix Technologies is a software house in Rangkasbitung, Lebak Regency, Banten, Indonesia, focused on POS solutions, enterprise systems, digital ticketing, custom software, server infrastructure, and application & server maintenance.
+
+---
+
+## 1. Identity and Contact
+
+- Official name: Phoenix Technologies
+- Website: https://phoenixtech.web.id/en
+- Official email: connectphoenixtech@gmail.com
+- WhatsApp: +62 817-5200-116 (https://wa.me/628175200116)
+- Office address: Jl. Profesor Dr. Insinyur Soetami, RT/RW 001/001, Kp. Malangnengah, Cijoro Pasir Village, Rangkasbitung District, Lebak Regency, Banten 42316, Indonesia.
+- Geographic coordinates: 6°21′ S · 106°15′ E (-6.350, 106.250)
+- Service area: Across Indonesia; remote consulting and on-site implementation depending on the project.
+- Stated operating hours: Monday-Saturday, 08:00-18:00 WIB.
+
+---
+
+## 2. Catalog of 10 Solutions
+
+### 1. POS Solutions (Point of Sale)
+- **Description**: POS solutions for cashier transactions, real-time stock management, sales reports, and multi-outlet operations.
+- **Topics / Tags**: POS system, cashier app, stock, sales reports, multi-outlet.
+- **Best for**: Businesses that need integrated transaction and stock records.
+
+### 2. Enterprise Solutions
+- **Description**: Enterprise systems to manage inventory, customers, HR, and operational reporting in a single dashboard.
+- **Topics / Tags**: Enterprise software, ERP, CRM, multi-division, dashboard.
+- **Best for**: Organizations that need a central operations system aligned with their business processes.
+
+### 3. Ticketing Solutions
+- **Description**: Digital ticketing systems with QR tickets and entry validation for events, tourist destinations, and transportation.
+- **Topics / Tags**: Online ticketing, QR tickets, events, tourism, transportation, ticket validation.
+- **Best for**: Event organizers and service operators that need to issue and validate tickets.
+
+### 4. Custom Software
+- **Description**: Web and mobile application development tailored to your workflows, integrations, and specific business needs.
+- **Topics / Tags**: Custom software, web app, mobile app, API integration.
+- **Best for**: Businesses whose processes or needs are not covered by off-the-shelf software.
+
+### 5. Tech & Server Solutions
+- **Description**: Technology consulting and server or cloud infrastructure design, including platform selection and system roadmaps.
+- **Topics / Tags**: Server solutions, cloud infrastructure, system architecture, technology consulting.
+- **Best for**: Businesses that need to design or evaluate their technology infrastructure.
+
+### 6. Maintenance
+- **Description**: Application and server maintenance through bug fixes, system updates, and regular monitoring based on operational needs.
+- **Topics / Tags**: Application maintenance, server maintenance, bug fixes, system updates, monitoring.
+- **Best for**: System owners who need technical maintenance after implementation.
+
+### 7. IoT Solutions (Internet of Things)
+- **Description**: Integrating sensors and devices into a dashboard for condition monitoring, data history, and real-time alerts.
+- **Topics / Tags**: IoT, sensors, monitoring, telemetry, dashboard, alerts.
+- **Best for**: Operations that need to monitor devices or field conditions.
+
+### 8. Finance System Solutions
+- **Description**: Systems for transaction records, invoices, payments, and financial reporting.
+- **Topics / Tags**: Financial records, invoices, payments, reporting.
+- **Best for**: Businesses that want more organized financial records and reporting.
+
+### 9. Reservation System Solutions
+- **Description**: Online booking and scheduling systems for hotels, restaurants, clinics, or services, with automatic reminders.
+- **Topics / Tags**: Online reservation, booking, schedule, reminders.
+- **Best for**: Businesses that manage time slots, schedules, or bookings.
+
+### 10. Automation Solutions
+- **Description**: Integrating applications and data to reduce repetitive manual work in operational flows.
+- **Topics / Tags**: Workflow automation, application integration, API, webhook.
+- **Best for**: Teams that need to simplify work across applications.
+
+Scope, technology, integrations, infrastructure, and support arrangements are defined together after the project requirements are discussed. These descriptions do not set pricing or SLAs.
+
+---
+
+## 3. Portfolio
+
+### Bacco Kanvas
+- A sales app for tobacco product distribution, built for small businesses.
+- Reference: https://phoenixtech.web.id/en#portofolio
+
+### Udayana Store
+- An e-commerce platform for the Udayana small business.
+- Reference: https://phoenixtech.web.id/en#portofolio
+
+---
+
+## 4. Four-Phase Working Methodology
+
+1. **Phase 1: Requirements Analysis**:
+   - Stakeholder discussions and interviews.
+   - Mapping the current workflow.
+   - Defining scope and priorities.
+   - Deliverable: Scope document and estimate.
+
+2. **Phase 2: Solution Design**:
+   - Architecture and database design.
+   - User flow and interface design.
+   - Prototype approval.
+   - Deliverable: Prototype and design document.
+
+3. **Phase 3: Development and Testing**:
+   - Module-by-module development.
+   - Regular demos for the client.
+   - Functional and security testing.
+   - Deliverable: Test build and test report.
+
+4. **Phase 4: Implementation and Support**:
+   - Data migration and launch into the live environment.
+   - User training.
+   - Maintenance and technical support.
+   - Deliverable: Live system and user guide.
+
+---
+
+## 5. The Phoenix Technologies Approach
+
+- **Fits Your Business Process**: We do not force templates; systems are built around each client's unique needs.
+- **Integrated**: POS, enterprise, IoT, finance, and reservation systems can be designed to exchange data within the agreed scope.
+- **Modular**: Solutions can be delivered in stages based on project priorities and needs.
+- **Hands-on Support**: Implementation includes data migration and user training as agreed in the project.
+
+---
+
+## 6. Frequently Asked Questions (FAQ)
+
+**Q: How do I start a project with Phoenix Technologies?**
+A: Contact the official WhatsApp at +62 817-5200-116 or use the contact form at https://phoenixtech.web.id/en#kontak. The initial consultation is free of charge.
+
+**Q: Where is the Phoenix Technologies office located?**
+A: Our office is at Jl. Profesor Dr. Insinyur Soetami, Kp. Malangnengah, Cijoro Pasir, Rangkasbitung, Lebak Regency, Banten 42316.
+
+**Q: Does Phoenix Technologies serve clients outside Banten?**
+A: Yes. The service area covers all of Indonesia; remote consulting and on-site implementation can be arranged based on the project.
+
+**Q: Are pricing, technology, or SLAs already fixed?**
+A: They are not published publicly. Details are discussed once the project requirements, integrations, and scope are known.
+
+## 7. Official References
+
+- Website: https://phoenixtech.web.id/en
+- Summary for LLMs: https://phoenixtech.web.id/llms-en.txt
+- XML sitemap: https://phoenixtech.web.id/sitemap.xml
+- Services: https://phoenixtech.web.id/en#layanan
+- Portfolio: https://phoenixtech.web.id/en#portofolio
+- Contact: https://phoenixtech.web.id/en#kontak

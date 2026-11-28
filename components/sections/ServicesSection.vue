@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import { SERVICES_DATA } from '~/constants/services'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { createWhatsAppUrl } from '~/constants/company'
+import { useContent } from '~/composables/useContent'
+
+const { content } = useContent()
 
 const currentIndex = ref(0)
 const isAutoRotating = ref(true)
 let autoRotateTimer: ReturnType<typeof setInterval> | null = null
 
 const services = computed(() => {
-  const total = SERVICES_DATA.length
-  return SERVICES_DATA.map((item, index) => {
+  const items = content.value.services.items
+  const total = items.length
+
+  return items.map((item, index) => {
     const angle = (index / total) * Math.PI * 2 - Math.PI / 2
     const x = Number((50 + 42 * Math.cos(angle)).toFixed(3))
     const y = Number((50 + 42 * Math.sin(angle)).toFixed(3))
@@ -18,9 +22,7 @@ const services = computed(() => {
       ...item,
       x,
       y,
-      whatsAppUrl: createWhatsAppUrl(
-        `Halo Phoenix Technologies, saya tertarik dengan layanan ${item.name}.`
-      ),
+      whatsAppUrl: createWhatsAppUrl(content.value.whatsapp.serviceInterest(item.name)),
     }
   })
 })
@@ -76,9 +78,9 @@ onBeforeUnmount(() => {
   <section class="s" id="layanan">
     <div class="wrap">
       <div class="head">
-        <span class="tag">// layanan</span>
-        <h2>Sepuluh solusi yang mengorbit satu tujuan: bisnis Anda berjalan lebih ringan.</h2>
-        <p>Pilih satu untuk melihat detailnya. Semua sistem bisa berdiri sendiri atau saling terhubung.</p>
+        <span class="tag">{{ content.services.tag }}</span>
+        <h2>{{ content.services.heading }}</h2>
+        <p>{{ content.services.description }}</p>
       </div>
 
       <div class="svc" @pointerenter="pauseAutoRotation">
@@ -169,7 +171,7 @@ onBeforeUnmount(() => {
                     target="_blank"
                     rel="noopener"
                   >
-                    Tanyakan layanan ini
+                    {{ content.services.ctaLabel }}
                   </a>
                 </div>
               </div>

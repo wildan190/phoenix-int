@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { createWhatsAppUrl } from '~/constants/company'
+import { useContent } from '~/composables/useContent'
 
-const consultationUrl = createWhatsAppUrl(
-  'Halo Phoenix Technologies, saya ingin konsultasi proyek.'
-)
+const { content } = useContent()
+
+const consultationUrl = computed(() => createWhatsAppUrl(content.value.whatsapp.consultation))
 </script>
 
 <template>
@@ -15,8 +17,8 @@ const consultationUrl = createWhatsAppUrl(
   >
     <div class="wrap">
       <div>
-        <h2>Mulai proyek Anda.</h2>
-        <p>Konsultasi awal tanpa biaya · balasan lewat WhatsApp</p>
+        <h2>{{ content.cta.heading }}</h2>
+        <p>{{ content.cta.description }}</p>
       </div>
       <span class="go" aria-hidden="true">
         <svg viewBox="0 0 24 24">

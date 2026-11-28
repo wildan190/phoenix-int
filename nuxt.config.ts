@@ -1,5 +1,3 @@
-import { SITE_META } from './constants/seo'
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
@@ -18,17 +16,19 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'id',
       },
-      title: SITE_META.title,
+      title: 'Phoenix Technologies | POS, Enterprise & Custom Software',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         {
           name: 'description',
-          content: SITE_META.description,
+          content:
+            'Solusi POS, software enterprise, ticketing digital, maintenance aplikasi & server, serta custom software dari Rangkasbitung, Banten untuk bisnis di seluruh Indonesia.',
         },
         {
           name: 'keywords',
-          content: SITE_META.keywords,
+          content:
+            'Phoenix Technologies, solusi POS Indonesia, aplikasi kasir, solusi enterprise, custom software Indonesia, aplikasi ticketing, maintenance aplikasi, maintenance server, software house Indonesia, software house Rangkasbitung, solusi IT Banten',
         },
         { name: 'author', content: 'Phoenix Technologies' },
         {
@@ -43,39 +43,18 @@ export default defineNuxtConfig({
         // Open Graph / Facebook Meta Tags
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Phoenix Technologies' },
-        { property: 'og:url', content: SITE_META.siteUrl },
-        {
-          property: 'og:title',
-          content: SITE_META.title,
-        },
-        {
-          property: 'og:description',
-          content: SITE_META.description,
-        },
-        { property: 'og:image', content: SITE_META.ogImage },
+        { property: 'og:image', content: '/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: `${SITE_META.siteName} | Solusi POS dan Software` },
-        { property: 'og:locale', content: SITE_META.locale },
         // Twitter Card Meta Tags
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:url', content: SITE_META.siteUrl },
-        {
-          name: 'twitter:title',
-          content: SITE_META.title,
-        },
-        {
-          name: 'twitter:description',
-          content: SITE_META.description,
-        },
-        { name: 'twitter:image', content: SITE_META.ogImage },
+        { name: 'twitter:image', content: '/og-image.png' },
         // Mobile & Theme
         { name: 'theme-color', content: '#FFF8F1', media: '(prefers-color-scheme: light)' },
         { name: 'theme-color', content: '#130E0B', media: '(prefers-color-scheme: dark)' },
         { name: 'claude:viewport-fit-sides', content: 'cover' },
       ],
       link: [
-        { rel: 'canonical', href: `${SITE_META.siteUrl}/` },
         { rel: 'icon', type: 'image/png', href: '/logo.png' },
         { rel: 'apple-touch-icon', href: '/logo.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

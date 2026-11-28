@@ -1,30 +1,24 @@
 import {
-  SITE_URL,
-  COMPANY_NAME,
-  COMPANY_PHONE_RAW,
   COMPANY_EMAIL,
   COMPANY_LOCATION,
+  COMPANY_NAME,
+  COMPANY_PHONE_RAW,
+  SITE_URL,
 } from './company'
-import { SERVICES_DATA } from './services'
+import type { SiteContent } from '../types/content'
 
-export const SITE_META = {
-  domain: 'phoenixtech.web.id',
-  siteUrl: SITE_URL,
-  siteName: COMPANY_NAME,
-  title: 'Phoenix Technologies | POS, Enterprise & Custom Software',
-  description:
-    'Solusi POS, software enterprise, ticketing digital, maintenance aplikasi & server, serta custom software dari Rangkasbitung, Banten untuk bisnis di seluruh Indonesia.',
-  keywords:
-    'Phoenix Technologies, solusi POS Indonesia, software POS multi-cabang, aplikasi kasir, solusi enterprise, enterprise software Indonesia, custom software Indonesia, jasa pembuatan aplikasi, aplikasi ticketing, ticketing QR, maintenance aplikasi, maintenance server, manajemen server, server cloud, infrastruktur server, software house Indonesia, software house Rangkasbitung, solusi IT Banten',
-  ogImage: `${SITE_URL}/og-image.png`,
-  locale: 'id_ID',
+export function pageUrlFor(content: SiteContent): string {
+  return content.canonicalPath === '/' ? `${SITE_URL}/` : `${SITE_URL}${content.canonicalPath}`
 }
 
-export function generateSchemaOrg() {
+export function generateSchemaOrg(content: SiteContent) {
   const organizationId = `${SITE_URL}/#organization`
-  const serviceEntities = SERVICES_DATA.map((service) => ({
+  const websiteId = `${SITE_URL}/#website`
+  const pageUrl = pageUrlFor(content)
+
+  const serviceEntities = content.services.items.map((service) => ({
     '@type': 'Service',
-    '@id': `${SITE_URL}/#service-${service.id}`,
+    '@id': `${pageUrl}#service-${service.id}`,
     name: service.name,
     description: service.description,
     serviceType: service.tags,
@@ -35,7 +29,7 @@ export function generateSchemaOrg() {
       '@type': 'Country',
       name: 'Indonesia',
     },
-    url: `${SITE_URL}/#layanan`,
+    url: `${pageUrl}#layanan`,
   }))
 
   const serviceOffers = serviceEntities.map((service) => ({
@@ -61,8 +55,8 @@ export function generateSchemaOrg() {
           contentUrl: `${SITE_URL}/logo.png`,
           caption: COMPANY_NAME,
         },
-        image: [SITE_META.ogImage, `${SITE_URL}/logo.png`],
-        description: SITE_META.description,
+        image: [`${SITE_URL}/og-image.png`, `${SITE_URL}/logo.png`],
+        description: content.seo.description,
         telephone: `+62${COMPANY_PHONE_RAW.replace(/^0/, '')}`,
         email: COMPANY_EMAIL,
         address: {
@@ -83,14 +77,7 @@ export function generateSchemaOrg() {
           '@type': 'Country',
           name: 'Indonesia',
         },
-        knowsAbout: [
-          'Sistem point of sale (POS)',
-          'Enterprise software',
-          'Custom software',
-          'Sistem ticketing digital',
-          'Maintenance aplikasi dan server',
-          'Infrastruktur server dan cloud',
-        ],
+        knowsAbout: content.seo.knowsAbout,
         openingHoursSpecification: [
           {
             '@type': 'OpeningHoursSpecification',
@@ -108,29 +95,29 @@ export function generateSchemaOrg() {
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Katalog Layanan Phoenix Technologies',
+          name: content.seo.catalogName,
           itemListElement: serviceOffers,
         },
       },
       {
         '@type': 'WebSite',
-        '@id': `${SITE_URL}/#website`,
+        '@id': websiteId,
         url: SITE_URL,
         name: COMPANY_NAME,
-        alternateName: SITE_META.domain,
-        description: SITE_META.description,
+        alternateName: content.seo.title,
+        description: content.seo.description,
         publisher: {
           '@id': organizationId,
         },
-        inLanguage: 'id-ID',
+        inLanguage: content.htmlLang,
       },
       {
         '@type': 'WebPage',
-        '@id': `${SITE_URL}/#webpage`,
-        url: `${SITE_URL}/`,
-        name: SITE_META.title,
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: content.seo.title,
         isPartOf: {
-          '@id': `${SITE_URL}/#website`,
+          '@id': websiteId,
         },
         about: {
           '@id': organizationId,
@@ -138,9 +125,9 @@ export function generateSchemaOrg() {
         mainEntity: {
           '@id': organizationId,
         },
-        description: SITE_META.description,
-        keywords: SITE_META.keywords,
-        inLanguage: 'id-ID',
+        description: content.seo.description,
+        keywords: content.seo.keywords,
+        inLanguage: content.htmlLang,
       },
       ...serviceEntities,
     ],

@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import { CLIENTS_DATA } from '~/constants/clients'
+import { useContent } from '~/composables/useContent'
+
+const { content } = useContent()
 </script>
 
 <template>
   <section id="klien" class="s clients">
     <div class="wrap">
       <div class="head">
-        <span class="tag">// klien</span>
-        <h2>Kolaborasi yang membangun kepercayaan.</h2>
-        <p>Beberapa mitra yang telah berkolaborasi bersama Phoenix Technologies.</p>
+        <span class="tag">{{ content.clients.tag }}</span>
+        <h2>{{ content.clients.heading }}</h2>
+        <p>{{ content.clients.description }}</p>
       </div>
 
-      <ul class="client-list" aria-label="Daftar klien">
+      <ul class="client-list" :aria-label="content.clients.listAriaLabel">
         <li
-          v-for="(client, index) in CLIENTS_DATA"
+          v-for="(client, index) in content.clients.items"
           :key="client.name"
           class="client"
         >

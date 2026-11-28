@@ -1,7 +1,12 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-export type PublicDocumentName = 'llms.txt' | 'llms-full.txt' | 'sitemap.xml'
+export type PublicDocumentName =
+  | 'llms.txt'
+  | 'llms-full.txt'
+  | 'llms-en.txt'
+  | 'llms-full-en.txt'
+  | 'sitemap.xml'
 
 export function readPublicDocument(name: PublicDocumentName): string | null {
   const candidates = [

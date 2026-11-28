@@ -1,7 +1,9 @@
+import { useContent } from './useContent'
 import { useToast } from './useToast'
 
 export function useClipboard() {
   const { showToast } = useToast()
+  const { content } = useContent()
 
   async function copyToClipboard(text: string): Promise<boolean> {
     if (!import.meta.client) return false
@@ -9,7 +11,7 @@ export function useClipboard() {
     if (navigator.clipboard && window.isSecureContext) {
       try {
         await navigator.clipboard.writeText(text)
-        showToast(`Tersalin: ${text}`)
+        showToast(content.value.toast.copied(text))
         return true
       } catch (err) {
         console.warn('Clipboard API failed, trying fallback...', err)
@@ -30,13 +32,13 @@ export function useClipboard() {
       textarea.remove()
 
       if (successful) {
-        showToast(`Tersalin: ${text}`)
+        showToast(content.value.toast.copied(text))
         return true
       }
-      showToast(`Salin manual: ${text}`)
+      showToast(content.value.toast.manualCopy(text))
       return false
     } catch {
-      showToast(`Salin manual: ${text}`)
+      showToast(content.value.toast.manualCopy(text))
       return false
     }
   }

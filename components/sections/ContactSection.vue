@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { CONTACT_CHANNELS, COMPANY_LOCATION } from '~/constants/company'
-import { SERVICES_DATA } from '~/constants/services'
+import { COMPANY_LOCATION, CONTACT_CHANNELS } from '~/constants/company'
 import { useClipboard } from '~/composables/useClipboard'
+import { useContent } from '~/composables/useContent'
 import { useWhatsAppComposer } from '~/composables/useWhatsAppComposer'
+
+const { content } = useContent()
 
 const { copyToClipboard } = useClipboard()
 const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsAppComposer()
@@ -14,9 +16,9 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
       <div class="contact">
         <!-- Direct Contact Channels -->
         <div>
-          <span class="tag">// kontak</span>
+          <span class="tag">{{ content.contact.tag }}</span>
           <h2 style="font-size: clamp(1.55rem, 3.6vw, 2.5rem); margin-top: 0.9rem">
-            Hubungi Phoenix Technologies.
+            {{ content.contact.heading }}
           </h2>
 
           <div class="rows">
@@ -28,17 +30,17 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
                 </svg>
               </div>
               <div>
-                <small>WhatsApp</small>
+                <small>{{ content.contact.channels.whatsapp.label }}</small>
                 <div class="val">{{ CONTACT_CHANNELS[0].displayValue }}</div>
                 <div class="acts">
                   <a :href="CONTACT_CHANNELS[0].href" target="_blank" rel="noopener">
-                    Buka WhatsApp
+                    {{ content.contact.channels.whatsapp.actionLabel }}
                   </a>
                   <button
                     type="button"
                     @click="copyToClipboard(CONTACT_CHANNELS[0].copyValue || '')"
                   >
-                    Salin nomor
+                    {{ content.contact.channels.whatsapp.copyLabel }}
                   </button>
                 </div>
               </div>
@@ -53,17 +55,17 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
                 </svg>
               </div>
               <div>
-                <small>Email</small>
+                <small>{{ content.contact.channels.email.label }}</small>
                 <div class="val">{{ CONTACT_CHANNELS[1].displayValue }}</div>
                 <div class="acts">
                   <a :href="CONTACT_CHANNELS[1].href">
-                    Kirim email
+                    {{ content.contact.channels.email.actionLabel }}
                   </a>
                   <button
                     type="button"
                     @click="copyToClipboard(CONTACT_CHANNELS[1].copyValue || '')"
                   >
-                    Salin email
+                    {{ content.contact.channels.email.copyLabel }}
                   </button>
                 </div>
               </div>
@@ -78,7 +80,7 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
                 </svg>
               </div>
               <div>
-                <small>Alamat</small>
+                <small>{{ content.contact.channels.address.label }}</small>
                 <div class="val">{{ COMPANY_LOCATION.fullAddress }}</div>
               </div>
             </div>
@@ -91,25 +93,25 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
             <i aria-hidden="true" />
             <i aria-hidden="true" />
             <i aria-hidden="true" />
-            <span style="margin-left: 0.4rem">phoenix ~ konsultasi-baru</span>
+            <span style="margin-left: 0.4rem">{{ content.contact.form.terminalTitle }}</span>
           </div>
 
           <form autocomplete="off" @submit.prevent>
             <label for="f-name">
-              &gt; nama
+              &gt; {{ content.contact.form.nameLabel }}
               <input
                 id="f-name"
                 v-model="clientName"
                 type="text"
-                placeholder="Nama Anda atau usaha"
+                :placeholder="content.contact.form.namePlaceholder"
               />
             </label>
 
             <label for="f-svc">
-              &gt; layanan
+              &gt; {{ content.contact.form.serviceLabel }}
               <select id="f-svc" v-model="selectedServiceName">
                 <option
-                  v-for="service in SERVICES_DATA"
+                  v-for="service in content.services.items"
                   :key="service.id"
                   :value="service.name"
                 >
@@ -119,11 +121,11 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
             </label>
 
             <label for="f-msg">
-              &gt; pesan
+              &gt; {{ content.contact.form.messageLabel }}
               <textarea
                 id="f-msg"
                 v-model="messageNotes"
-                placeholder="Contoh: saya punya 3 cabang toko dan ingin stok tersinkron."
+                :placeholder="content.contact.form.messagePlaceholder"
               />
             </label>
 
@@ -144,7 +146,7 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
               >
                 <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z" />
               </svg>
-              Kirim lewat WhatsApp
+              {{ content.contact.form.submitLabel }}
             </a>
           </form>
         </div>
@@ -153,7 +155,7 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
       <!-- Google Maps Embed -->
       <div class="map">
         <iframe
-          title="Lokasi Phoenix Technologies"
+          :title="content.contact.mapTitle"
           :src="COMPANY_LOCATION.embedMapUrl"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -163,4 +165,3 @@ const { clientName, selectedServiceName, messageNotes, whatsAppUrl } = useWhatsA
     </div>
   </section>
 </template>
-

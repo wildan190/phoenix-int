@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { NAV_ITEMS } from '~/constants/navigation'
-import { DEFAULT_WHATSAPP_URL } from '~/constants/company'
+import { createWhatsAppUrl } from '~/constants/company'
+import { resolveLocale } from '~/composables/useContent'
+import { getContent } from '~/locales'
+import type { ErrorCopy } from '~/types/content'
 
 const props = defineProps<{
   error: {
@@ -12,89 +14,52 @@ const props = defineProps<{
   }
 }>()
 
-const statusCode = computed(() => props.error?.statusCode ?? 500)
-const statusLabel = computed(() => props.error?.statusMessage || props.error?.message || '')
+const failedPath = computed(() => {
+  const url = props.error?.url
+  if (!url) return '/'
 
-interface ErrorCopy {
-  title: string
-  message: string
-  hint: string
-  primary: 'home' | 'retry'
-}
-
-const copy = computed<ErrorCopy>(() => {
-  const code = statusCode.value
-
-  if (code === 404) {
-    return {
-      title: 'Halaman tidak ditemukan',
-      message: 'Tautan yang Anda tuju mungkin telah dipindahkan, diubah namanya, atau tidak pernah ada.',
-      hint: 'Periksa kembali alamatnya, atau mulai lagi dari beranda.',
-      primary: 'home',
-    }
-  }
-
-  if (code === 403) {
-    return {
-      title: 'Akses ditolak',
-      message: 'Anda tidak memiliki izin untuk membuka halaman ini.',
-      hint: 'Jika ini keliru, hubungi tim kami untuk mendapatkan akses.',
-      primary: 'home',
-    }
-  }
-
-  if (code === 429) {
-    return {
-      title: 'Terlalu banyak permintaan',
-      message: 'Anda mengirim permintaan terlalu sering dalam waktu singkat.',
-      hint: 'Tunggu sebentar, lalu coba lagi.',
-      primary: 'retry',
-    }
-  }
-
-  if (code === 503) {
-    return {
-      title: 'Layanan sedang tidak tersedia',
-      message: 'Kami sedang melakukan pemeliharaan atau lonjakan trafik.',
-      hint: 'Silakan kembali beberapa saat lagi.',
-      primary: 'retry',
-    }
-  }
-
-  if (code >= 500) {
-    return {
-      title: 'Terjadi kesalahan pada server',
-      message: 'Sistem kami gagal memproses permintaan ini. Ini bukan kesalahan Anda.',
-      hint: 'Silakan coba lagi sebentar lagi. Jika masih gagal, hubungi tim kami.',
-      primary: 'retry',
-    }
-  }
-
-  return {
-    title: 'Terjadi kesalahan',
-    message: 'Sesuatu yang tidak terduga terjadi saat memuat halaman ini.',
-    hint: 'Silakan coba lagi atau kembali ke beranda.',
-    primary: 'retry',
+  try {
+    return new URL(url, 'https://phoenixtech.web.id').pathname
+  } catch {
+    return url
   }
 })
 
+const locale = computed(() => resolveLocale(failedPath.value))
+const content = computed(() => getContent(locale.value))
+
+const statusCode = computed(() => props.error?.statusCode ?? 500)
+const statusLabel = computed(() => props.error?.statusMessage || props.error?.message || '')
+
+const copy = computed<ErrorCopy>(() => content.value.error.byStatus(statusCode.value))
+
+const consultationUrl = computed(() => createWhatsAppUrl(content.value.whatsapp.default))
+
+function quickLink(href: string) {
+  return locale.value === 'en' ? `/en${href}` : `/${href}`
+}
+
 const detailRows = computed(() => {
   const rows: { label: string; value: string }[] = []
-  rows.push({ label: 'Kode', value: `${statusCode.value}` })
-  if (statusLabel.value) rows.push({ label: 'Keterangan', value: statusLabel.value })
-  if (props.error?.url) rows.push({ label: 'Alamat', value: props.error.url })
+  rows.push({ label: content.value.error.rows.code, value: `${statusCode.value}` })
+  if (statusLabel.value) {
+    rows.push({ label: content.value.error.rows.description, value: statusLabel.value })
+  }
+  if (props.error?.url) {
+    rows.push({ label: content.value.error.rows.url, value: props.error.url })
+  }
   return rows
 })
 
 const showQuickNav = computed(() => statusCode.value === 404)
 
 useHead({
-  title: `${statusCode.value} · ${copy.value.title} | Phoenix Technologies`,
+  title: computed(() => content.value.error.pageTitle(statusCode.value, copy.value.title)),
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
 function goHome() {
-  clearError({ redirect: '/' })
+  clearError({ redirect: locale.value === 'en' ? '/en' : '/' })
 }
 
 function retry() {
@@ -108,7 +73,7 @@ function retry() {
 
     <header class="err-top">
       <div class="wrap">
-        <a class="brand" href="/" aria-label="Phoenix Technologies">
+        <a class="brand" :href="locale === 'en' ? '/en' : '/'" aria-label="Phoenix Technologies">
           <img src="/logo.png" alt="Phoenix Technologies Logo" width="30" height="30" />
           <b>PHOENIX</b>
         </a>
@@ -144,7 +109,7 @@ function retry() {
             <path d="M3 11.5 12 4l9 7.5" />
             <path d="M5.5 10v9.5h13V10" />
           </svg>
-          <span>Kembali ke Beranda</span>
+          <span>{{ content.error.buttons.home }}</span>
         </button>
 
         <button v-else type="button" class="btn btn-primary" @click="retry">
@@ -160,10 +125,10 @@ function retry() {
             <path d="M20.5 12a8.5 8.5 0 1 1-2.5-6" />
             <path d="M20.5 4.5V10H15" />
           </svg>
-          <span>Coba Lagi</span>
+          <span>{{ content.error.buttons.retry }}</span>
         </button>
 
-        <a v-if="copy.primary === 'home'" class="btn btn-ghost" :href="DEFAULT_WHATSAPP_URL" target="_blank" rel="noopener">
+        <a v-if="copy.primary === 'home'" class="btn btn-ghost" :href="consultationUrl" target="_blank" rel="noopener">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -175,7 +140,7 @@ function retry() {
           >
             <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z" />
           </svg>
-          <span>Konsultasi</span>
+          <span>{{ content.error.buttons.consultation }}</span>
         </a>
 
         <button v-else type="button" class="btn btn-ghost" @click="goHome">
@@ -191,14 +156,14 @@ function retry() {
             <path d="M3 11.5 12 4l9 7.5" />
             <path d="M5.5 10v9.5h13V10" />
           </svg>
-          <span>Kembali ke Beranda</span>
+          <span>{{ content.error.buttons.home }}</span>
         </button>
       </div>
 
-      <section class="term diag" aria-label="Detail kesalahan">
+      <section class="term diag" :aria-label="content.error.detailAriaLabel">
         <div class="bar">
           <i /><i /><i />
-          <span>error log</span>
+          <span>{{ content.error.detailTerminalTitle }}</span>
         </div>
         <dl class="diag-rows">
           <div v-for="row in detailRows" :key="row.label">
@@ -208,9 +173,9 @@ function retry() {
         </dl>
       </section>
 
-      <nav v-if="showQuickNav" class="quick" aria-label="Navigasi cepat">
-        <span class="quick-label">Langsung ke</span>
-        <a v-for="item in NAV_ITEMS" :key="item.href" :href="`/${item.href}`">
+      <nav v-if="showQuickNav" class="quick" :aria-label="content.error.quickNavLabel">
+        <span class="quick-label">{{ content.error.quickNavLabel }}</span>
+        <a v-for="item in content.nav.items" :key="item.href" :href="quickLink(item.href)">
           {{ item.label }}
         </a>
       </nav>

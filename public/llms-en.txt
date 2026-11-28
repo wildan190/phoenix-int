@@ -1,0 +1,40 @@
+# Phoenix Technologies
+
+> A software house in Rangkasbitung, Banten, Indonesia, designing POS solutions, enterprise systems, ticketing, custom software, server infrastructure, and application & server maintenance.
+
+Phoenix Technologies helps businesses design and build digital systems that match their operations. Services are available to businesses across Indonesia, with remote consulting or on-site delivery depending on the project.
+
+- Official website: https://phoenixtech.web.id/en
+- Email: connectphoenixtech@gmail.com
+- WhatsApp: +62 817-5200-116 - https://wa.me/628175200116
+- Location: Jl. Profesor Dr. Insinyur Soetami, Kp. Malangnengah, Cijoro Pasir, Rangkasbitung, Lebak, Banten 42316, Indonesia
+
+## Solutions
+
+- [POS Solutions](https://phoenixtech.web.id/en#layanan): Cashier transactions, real-time stock, sales reports, and multi-outlet operations.
+- [Enterprise Solutions](https://phoenixtech.web.id/en#layanan): Enterprise systems for inventory, CRM, HR, and operational reporting.
+- [Ticketing Solutions](https://phoenixtech.web.id/en#layanan): Digital ticketing with QR tickets and entry validation for events, tourism, and transportation.
+- [Custom Software](https://phoenixtech.web.id/en#layanan): Web and mobile application development tailored to your workflows and integrations.
+- [Tech & Server Solutions](https://phoenixtech.web.id/en#layanan): Technology consulting and server or cloud infrastructure design.
+- [Maintenance](https://phoenixtech.web.id/en#layanan): Application and server maintenance, bug fixes, system updates, and regular monitoring.
+- [IoT Solutions](https://phoenixtech.web.id/en#layanan): Sensor and device integration into real-time monitoring dashboards.
+- [Finance System Solutions](https://phoenixtech.web.id/en#layanan): Transaction records, invoices, payments, and financial reporting.
+- [Reservation System Solutions](https://phoenixtech.web.id/en#layanan): Booking and scheduling systems with automatic reminders.
+- [Automation Solutions](https://phoenixtech.web.id/en#layanan): Workflow automation and integration of business applications and data.
+
+## Portfolio
+
+- [Bacco Kanvas](https://phoenixtech.web.id/en#portofolio): A sales app for tobacco product distribution, built for small businesses.
+- [Udayana Store](https://phoenixtech.web.id/en#portofolio): An e-commerce platform for the Udayana small business.
+
+## References
+
+- [Full company and service context](https://phoenixtech.web.id/llms-full-en.txt)
+- [XML sitemap](https://phoenixtech.web.id/sitemap.xml)
+- [Contact and consultation](https://phoenixtech.web.id/en#kontak)
+
+## Usage Notes
+
+- This is a single-page landing site; services and portfolio live under the `#layanan` and `#portofolio` anchors.
+- Do not assume pricing, SLAs, specific technologies, or server specifications that are not stated in the official references.
+- Use the service names, descriptions, address, and contacts above as the factual source about Phoenix Technologies.

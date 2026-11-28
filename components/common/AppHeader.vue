@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { NAV_ITEMS } from '~/constants/navigation'
-import { DEFAULT_WHATSAPP_URL } from '~/constants/company'
+import { computed } from 'vue'
+import { createWhatsAppUrl } from '~/constants/company'
+import { useContent } from '~/composables/useContent'
+
+const { content, locale } = useContent()
+
+const consultationUrl = computed(() => createWhatsAppUrl(content.value.whatsapp.default))
 </script>
 
 <template>
@@ -12,9 +17,9 @@ import { DEFAULT_WHATSAPP_URL } from '~/constants/company'
           <b>PHOENIX</b>
         </a>
 
-        <nav class="links" aria-label="Navigasi utama">
+        <nav class="links" :aria-label="content.nav.ariaLabel">
           <a
-            v-for="item in NAV_ITEMS"
+            v-for="item in content.nav.items"
             :key="item.href"
             :href="item.href"
           >
@@ -22,27 +27,47 @@ import { DEFAULT_WHATSAPP_URL } from '~/constants/company'
           </a>
         </nav>
 
-        <a
-          class="btn btn-primary"
-          :href="DEFAULT_WHATSAPP_URL"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
+        <div class="pill-actions">
+          <div class="lang" role="group" :aria-label="content.languageSwitcher.ariaLabel">
+            <NuxtLink
+              to="/"
+              :class="{ on: locale === 'id' }"
+              :title="content.languageSwitcher.titles.id"
+              :aria-current="locale === 'id' ? 'true' : undefined"
+            >
+              ID
+            </NuxtLink>
+            <NuxtLink
+              to="/en"
+              :class="{ on: locale === 'en' }"
+              :title="content.languageSwitcher.titles.en"
+              :aria-current="locale === 'en' ? 'true' : undefined"
+            >
+              EN
+            </NuxtLink>
+          </div>
+
+          <a
+            class="btn btn-primary"
+            :href="consultationUrl"
+            target="_blank"
+            rel="noopener"
           >
-            <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z" />
-          </svg>
-          <span>Konsultasi</span>
-        </a>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z" />
+            </svg>
+            <span>{{ content.nav.ctaLabel }}</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 </template>
-

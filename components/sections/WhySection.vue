@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import { BENEFITS_DATA } from '~/constants/benefits'
+import { useContent } from '~/composables/useContent'
+
+const { content } = useContent()
 </script>
 
 <template>
   <section class="s why" id="keunggulan">
     <div class="wrap why-grid">
       <div class="head">
-        <span class="tag">// mengapa phoenix</span>
-        <h2>Dibuat untuk dipakai, bukan sekadar diserahkan.</h2>
+        <span class="tag">{{ content.benefits.tag }}</span>
+        <h2>{{ content.benefits.heading }}</h2>
         <p>
-          Seperti burung yang menjadi nama kami, sistem yang kami bangun dirancang untuk bertahan, beradaptasi, dan bangkit lagi saat kebutuhan berubah.
+          {{ content.benefits.description }}
         </p>
       </div>
 
       <div class="rules">
         <div
-          v-for="benefit in BENEFITS_DATA"
+          v-for="benefit in content.benefits.items"
           :key="benefit.title"
           class="rule"
         >

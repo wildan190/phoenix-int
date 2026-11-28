@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import { PORTFOLIO_DATA } from '~/constants/portfolio'
+import { useContent } from '~/composables/useContent'
+
+const { content } = useContent()
 </script>
 
 <template>
   <section id="portofolio" class="s portfolio">
     <div class="wrap">
       <div class="head">
-        <span class="tag">// portofolio</span>
-        <h2>Solusi digital yang dirancang untuk kebutuhan nyata.</h2>
-        <p>Cuplikan aplikasi yang kami bangun bersama mitra.</p>
+        <span class="tag">{{ content.portfolio.tag }}</span>
+        <h2>{{ content.portfolio.heading }}</h2>
+        <p>{{ content.portfolio.description }}</p>
       </div>
 
       <div class="projects">
         <article
-          v-for="project in PORTFOLIO_DATA"
+          v-for="project in content.portfolio.items"
           :key="project.id"
           class="project"
           :class="`project-${project.id}`"
@@ -21,7 +23,7 @@ import { PORTFOLIO_DATA } from '~/constants/portfolio'
           <div
             class="preview"
             role="img"
-            :aria-label="`Pratinjau tampilan aplikasi ${project.name}`"
+            :aria-label="content.portfolio.previewAriaLabel(project.name)"
           >
             <div class="screen">
               <div class="status">

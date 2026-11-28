@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { PROJECT_WHATSAPP_URL, COMPANY_LOCATION } from '~/constants/company'
+import { computed, ref } from 'vue'
+import { COMPANY_LOCATION, createWhatsAppUrl } from '~/constants/company'
+import { useContent } from '~/composables/useContent'
 import { useEmbers } from '~/composables/useEmbers'
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 useEmbers(canvasRef)
+
+const { content } = useContent()
+
+const projectWhatsAppUrl = computed(() => createWhatsAppUrl(content.value.whatsapp.project))
 </script>
 
 <template>
@@ -13,7 +18,7 @@ useEmbers(canvasRef)
 
     <div class="wrap">
       <div class="coords">
-        <span><i>●</i> Berdiri di {{ COMPANY_LOCATION.city }}, {{ COMPANY_LOCATION.province }}</span>
+        <span><i>●</i> {{ content.hero.locationLabel }} {{ COMPANY_LOCATION.city }}, {{ COMPANY_LOCATION.province }}</span>
         <span>{{ COMPANY_LOCATION.coordinates }}</span>
       </div>
 
@@ -25,15 +30,15 @@ useEmbers(canvasRef)
       <div class="hero-lower">
         <div class="hero-copy">
           <p class="tagline">
-            Sistem digital yang <em>bangkit</em> dan tumbuh bersama bisnis Anda.
+            {{ content.hero.tagline.lead }}<em>{{ content.hero.tagline.accent }}</em>{{ content.hero.tagline.trail }}
           </p>
           <p class="lead">
-            Custom software, IoT, POS, reservasi, tiket, keuangan, sampai otomasi. Kami merancang, membangun, dan merawat teknologi yang dipakai tim Anda setiap hari.
+            {{ content.hero.lead }}
           </p>
           <div class="cta-row">
             <a
               class="btn btn-primary"
-              :href="PROJECT_WHATSAPP_URL"
+              :href="projectWhatsAppUrl"
               target="_blank"
               rel="noopener"
             >
@@ -48,10 +53,10 @@ useEmbers(canvasRef)
               >
                 <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z" />
               </svg>
-              Chat via WhatsApp
+              {{ content.hero.ctaWhatsApp }}
             </a>
             <a class="btn btn-ghost" href="#layanan">
-              Jelajahi layanan
+              {{ content.hero.ctaServices }}
             </a>
           </div>
         </div>
@@ -66,4 +71,3 @@ useEmbers(canvasRef)
     </div>
   </section>
 </template>
-
